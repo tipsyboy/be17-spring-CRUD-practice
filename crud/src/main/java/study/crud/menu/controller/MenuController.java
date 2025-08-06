@@ -24,7 +24,7 @@ public class MenuController {
 
         return ResponseEntity
                 .status(200)
-                .body("상품 등록 성공");
+                .body("메뉴 등록 성공");
     }
 
     @GetMapping("/list")
