@@ -42,8 +42,8 @@ public class LectureService {
         return null;
     }
 
-    public List<LectureDto.Lecture> search(String name) {
-        List<LectureEntity> result = lectureRepository.findByName(name);
+    public List<LectureDto.Lecture> search(String title) {
+        List<LectureEntity> result = lectureRepository.findByName(title);
 
         return result.stream()
                 .map(LectureDto.Lecture::from)
