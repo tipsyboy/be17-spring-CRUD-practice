@@ -11,8 +11,8 @@ public class ProductDto {
             ProductDto.Product dto = new ProductDto.Product();
             dto.setIdx(entity.getIdx());
             dto.setName(entity.getName());
-            dto.setDescription(entity.getDescription);
-            dto.setPrice(entity.getPrice);
+            dto.setDescription(entity.getDescription());
+            dto.setPrice(entity.getPrice());
 
             return dto;
 

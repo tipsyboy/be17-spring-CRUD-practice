@@ -2,6 +2,8 @@ package study.crud.product.service;
 
 import org.springframework.stereotype.Service;
 import study.crud.product.model.ProductDto;
+import study.crud.product.model.ProductEntity;
+import study.crud.product.repository.ProductRepository;
 
 import java.util.List;
 import java.util.Optional;
@@ -17,7 +19,7 @@ public class ProductService {
 
 
     public void register(ProductDto.Register dto) {
-        productRepository.save(dto.toEntity())
+        productRepository.save(dto.toEntity());
     }
 
     public List<ProductDto.Product> list() {
