@@ -16,12 +16,14 @@ public class BoardDto {
 
             return dto;
         }
-        public String getContent() {
-            return content;
+
+
+        public Integer getId() {
+            return id;
         }
 
-        public void setContent(String content) {
-            this.content = content;
+        public void setId(Integer id) {
+            this.id = id;
         }
 
         public String getName() {
@@ -32,18 +34,46 @@ public class BoardDto {
             this.name = name;
         }
 
-        public Integer getId() {
-            return id;
+        public String getContent() {
+            return content;
         }
 
-        public void setId(Integer id) {
-            this.id = id;
+        public void setContent(String content) {
+            this.content = content;
         }
+    }
+
+        public static class Register {
+            private String name;
+            private String content;
 
 
+            public BoardEntity toEntity() {
+                BoardEntity entity = new BoardEntity();
+                entity.setName(name);
+                entity.setContent(content);
 
 
+                return entity;
+            }
+
+
+            public String getName() {
+                return name;
+            }
+
+            public void setName(String name) {
+                this.name = name;
+            }
+
+            public String getContent() {
+                return content;
+            }
+
+            public void setContent(String content) {
+                this.content = content;
+            }
+        }
 
     }
 
-}
