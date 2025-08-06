@@ -3,6 +3,8 @@ package study.crud.board.controller;
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import study.crud.board.model.BoardDto;
+import study.crud.board.service.BoardService;
 
 import java.util.List;
 
