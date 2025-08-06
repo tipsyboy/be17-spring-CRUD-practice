@@ -1,22 +1,19 @@
 package study.crud.menu.controller;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import study.crud.menu.model.MenuDto;
 import study.crud.menu.service.MenuService;
-import study.crud.product.model.ProductDto;
 
 import java.util.List;
 
 @RequestMapping("/menu")
+@RequiredArgsConstructor
 @RestController
 public class MenuController {
 
     private final MenuService menuService;
-
-    public MenuController(MenuService menuService) {
-        this.menuService = menuService;
-    }
 
     @PostMapping("/register")
     public ResponseEntity<String> register(@RequestBody MenuDto.Register dto) {
