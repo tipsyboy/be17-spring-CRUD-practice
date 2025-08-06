@@ -1,8 +1,12 @@
 package study.crud.board.service;
 
 import org.springframework.stereotype.Service;
+import study.crud.board.model.BoardDto;
+import study.crud.board.model.BoardEntity;
+import study.crud.board.repository.BoardRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class BoardService {

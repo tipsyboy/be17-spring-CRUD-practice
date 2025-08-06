@@ -1,6 +1,5 @@
 package study.crud.board.controller;
 
-import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import study.crud.board.model.BoardDto;
@@ -24,7 +23,7 @@ public class BoardController {
     }
 
     @GetMapping("/list")
-    public RequestEntity list(){
+    public ResponseEntity list(){
         List<BoardDto.Board> response = boardService.list();
         return ResponseEntity.status(200).body(response);
     }
@@ -36,7 +35,7 @@ public class BoardController {
     }
 
     @GetMapping("/search")
-    public RequestEntity search(String name){
+    public ResponseEntity search(String name){
         List<BoardDto.Board> response = boardService.search(name);
         return ResponseEntity.status(200).body(response);
     }
