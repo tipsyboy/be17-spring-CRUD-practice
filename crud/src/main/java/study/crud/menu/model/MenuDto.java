@@ -49,42 +49,42 @@ public class MenuDto {
             this.calorie = calorie;
         }
 
-    public static class Register {
-        private String name;
-        private Integer price;
-        private Integer calorie;
+        public static class Register {
+            private String name;
+            private Integer price;
+            private Integer calorie;
 
-        public MenuEntity toEntity() {
-            MenuEntity entity = new MenuEntity();
-            entity.setName(name);
-            entity.setPrice(price);
-            entity.setCalorie(calorie);
-            return entity;
-        }
+            public MenuEntity toEntity() {
+                MenuEntity entity = new MenuEntity();
+                entity.setName(name);
+                entity.setPrice(price);
+                entity.setCalorie(calorie);
+                return entity;
+            }
 
-        public String getName() {
-            return name;
-        }
+            public String getName() {
+                return name;
+            }
 
-        public void setName(String name) {
-            this.name = name;
-        }
+            public void setName(String name) {
+                this.name = name;
+            }
 
-        public Integer getPrice() {
-            return price;
-        }
+            public Integer getPrice() {
+                return price;
+            }
 
-        public void setPrice(Integer price) {
-            this.price = price;
-        }
+            public void setPrice(Integer price) {
+                this.price = price;
+            }
 
-        public Integer getCalorie() {
-            return calorie;
-        }
+            public Integer getCalorie() {
+                return calorie;
+            }
 
-        public void setCalorie(Integer calorie) {
-            this.calorie = calorie;
+            public void setCalorie(Integer calorie) {
+                this.calorie = calorie;
+            }
         }
-    }
     }
 }
