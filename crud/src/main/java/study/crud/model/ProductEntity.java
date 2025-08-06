@@ -12,6 +12,7 @@ public class ProductEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idx;
     private String contents;
+    private Integer price;
 
     public Integer getPrice() {
         return price;
@@ -37,5 +38,5 @@ public class ProductEntity {
         this.idx = idx;
     }
 
-    private Integer price;
+
 }
