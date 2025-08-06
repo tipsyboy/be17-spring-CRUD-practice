@@ -4,32 +4,18 @@ import study.crud.product.model.ProductEntity;
 
 public class BoardDto {
     public static class Board {
-        private Integer idx;
-
-
-
-        private String title;
+        private Integer id;
+        private String name;
         private String content;
-
 
         public static BoardDto.Board from(BoardEntity entity) {
             BoardDto.Board dto = new BoardDto.Board();
-            dto.setIdx(entity.getIdx());
-            dto.setTitle(entity.getTitle());
-            dto.setContent(entity.getContent);
+            dto.setId(entity.getId());
+            dto.setName(entity.getName());
+            dto.setContent(entity.getContent());
 
-            return  dto;
+            return dto;
         }
-
-        public String getTitle() {
-            return title;
-        }
-
-
-        public void setTitle(String title) {
-            this.title = title;
-        }
-
         public String getContent() {
             return content;
         }
@@ -38,13 +24,26 @@ public class BoardDto {
             this.content = content;
         }
 
-        public Integer getIdx() {
-            return idx;
+        public String getName() {
+            return name;
         }
 
-        public void setIdx(Integer idx) {
-            this.idx = idx;
+        public void setName(String name) {
+            this.name = name;
         }
+
+        public Integer getId() {
+            return id;
+        }
+
+        public void setId(Integer id) {
+            this.id = id;
+        }
+
+
+
+
 
     }
+
 }
