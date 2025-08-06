@@ -19,7 +19,7 @@ public class MenuController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<String> register(@RequestBody MenuDto.Menu dto) {
+    public ResponseEntity<String> register(@RequestBody MenuDto.Register dto) {
         menuService.register(dto);
 
         return ResponseEntity
