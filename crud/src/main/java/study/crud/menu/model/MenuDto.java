@@ -5,6 +5,7 @@ import lombok.Getter;
 
 public class MenuDto {
     @Builder
+    @Getter
     public static class Menu {
         private Integer idx;
         private String name;
