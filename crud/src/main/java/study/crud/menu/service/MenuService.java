@@ -36,7 +36,7 @@ public class MenuService {
     }
 
     public List<MenuDto.Menu> search(String name) {
-        List<MenuEntity> result = MenuRepository.findByName(name);
+        List<MenuEntity> result = menuRepository.findByName(name);
         return result.stream().map(MenuDto.Menu::from).toList();
     }
 }
