@@ -3,6 +3,8 @@ package study.crud.lecture.controller;
 import org.apache.coyote.Response;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import study.crud.lecture.model.LectureDto;
+import study.crud.lecture.service.LectureService;
 
 import java.util.List;
 
