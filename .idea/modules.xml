@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/be17-spring-CRUD-practice.iml" filepath="$PROJECT_DIR$/.idea/be17-spring-CRUD-practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/crud.main.iml" filepath="$PROJECT_DIR$/.idea/modules/crud.main.iml" />
     </modules>
   </component>
 </project>
