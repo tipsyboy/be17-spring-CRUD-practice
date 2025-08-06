@@ -1,5 +1,6 @@
 package study.crud.lecture.service;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import study.crud.lecture.model.LectureDto;
 import study.crud.lecture.model.LectureEntity;
@@ -8,14 +9,11 @@ import study.crud.lecture.repository.LectureRepository;
 import java.util.List;
 import java.util.Optional;
 
+@RequiredArgsConstructor
 @Service
 public class LectureService {
 
     private final LectureRepository lectureRepository;
-
-    public LectureService(LectureRepository lectureRepository) {
-        this.lectureRepository = lectureRepository;
-    }
 
 
     public void register(LectureDto.Register dto) {
@@ -43,11 +41,8 @@ public class LectureService {
     }
 
 
-  
-
     public List<LectureDto.Lecture> search(String title) {
         List<LectureEntity> result = lectureRepository.findByTitle(title);
-
 
         return result.stream()
                 .map(LectureDto.Lecture::from)
