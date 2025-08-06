@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface MovieRepository extends JpaRepository<MovieEntity, Integer> {
-    List<MovieEntity> findByName(String name);
+    List<MovieEntity> findByTitle(String title);
 }
