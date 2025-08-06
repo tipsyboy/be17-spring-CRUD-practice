@@ -1,5 +1,6 @@
 package study.crud.menu.service;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import study.crud.menu.model.MenuDto;
 import study.crud.menu.model.MenuEntity;
@@ -8,13 +9,12 @@ import study.crud.menu.repository.MenuRepository;
 import java.util.List;
 import java.util.Optional;
 
+@RequiredArgsConstructor
 @Service
 public class MenuService {
     private final MenuRepository menuRepository;
 
-    public MenuService(MenuRepository menuRepository) {
-        this.menuRepository = menuRepository;
-    }
+
 
     public void register(MenuDto.Register dto) {
         menuRepository.save(dto.toEntity());
