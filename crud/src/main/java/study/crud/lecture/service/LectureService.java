@@ -46,7 +46,7 @@ public class LectureService {
   
 
     public List<LectureDto.Lecture> search(String title) {
-        List<LectureEntity> result = lectureRepository.findByName(title);
+        List<LectureEntity> result = lectureRepository.findByTitle(title);
 
 
         return result.stream()
