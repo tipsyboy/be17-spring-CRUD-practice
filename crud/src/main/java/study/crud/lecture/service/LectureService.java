@@ -1,6 +1,9 @@
 package study.crud.lecture.service;
 
 import org.springframework.stereotype.Service;
+import study.crud.lecture.model.LectureDto;
+import study.crud.lecture.model.LectureEntity;
+import study.crud.lecture.repository.LectureRepository;
 
 import java.util.List;
 import java.util.Optional;
