@@ -13,7 +13,7 @@ public class LectureDto {
             dto.setIdx(entity.getIdx());
             dto.setTitle(entity.getTitle());
             dto.setDescription(entity.getDescription());
-            dto.setTitle(entity.getTime());
+            dto.setTime(entity.getTime());
             dto.setPrice(entity.getPrice());
 
             return dto;
