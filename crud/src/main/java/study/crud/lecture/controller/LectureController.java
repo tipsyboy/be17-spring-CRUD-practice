@@ -1,6 +1,6 @@
 package study.crud.lecture.controller;
 
-import org.apache.coyote.Response;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import study.crud.lecture.model.LectureDto;
@@ -9,11 +9,10 @@ import study.crud.lecture.service.LectureService;
 import java.util.List;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/lecture")
 public class LectureController {
-    private LectureService lectureService;
-
-    public LectureController(LectureService lectureService) { this.lectureService = lectureService;}
+    private final LectureService lectureService;
 
     @PostMapping("/register")
     public ResponseEntity register(@RequestBody LectureDto.Register dto) {
