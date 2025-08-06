@@ -1,21 +1,22 @@
-package study.crud.product.model;
+package study.crud.lecture.model;
 
-public class ProductDto {
-    public static class Product {
+public class LectureDto {
+    public static class Lecture {
         private Integer idx;
-        private String name;
+        private String title;
         private String description;
+        private Integer time;
         private Integer price;
 
-        public static ProductDto.Product from(ProductEntity entity){
-            ProductDto.Product dto = new ProductDto.Product();
+        public static LectureDto.Lecture from(LectureEntity entity){
+            LectureDto.Lecture dto = new LectureDto.Lecture();
             dto.setIdx(entity.getIdx());
-            dto.setName(entity.getName());
+            dto.setTitle(entity.getTitle());
             dto.setDescription(entity.getDescription());
+            dto.setTime(entity.getTime());
             dto.setPrice(entity.getPrice());
 
             return dto;
-
         }
 
         public Integer getIdx() {
@@ -26,12 +27,12 @@ public class ProductDto {
             this.idx = idx;
         }
 
-        public String getName() {
-            return name;
+        public String getTitle() {
+            return title;
         }
 
-        public void setName(String name) {
-            this.name = name;
+        public void setTitle(String title) {
+            this.title = title;
         }
 
         public String getDescription() {
@@ -40,6 +41,14 @@ public class ProductDto {
 
         public void setDescription(String description) {
             this.description = description;
+        }
+
+        public Integer getTime() {
+            return time;
+        }
+
+        public void setTime(Integer time) {
+            this.time = time;
         }
 
         public Integer getPrice() {
@@ -52,25 +61,25 @@ public class ProductDto {
     }
 
     public static class Register {
-        private String name;
+        private String title;
         private String description;
+        private Integer time;
         private Integer price;
 
-        public ProductEntity toEntity() {
-            ProductEntity entity = new ProductEntity();
-            entity.setName(name);
+        public LectureEntity toEntity(){
+            LectureEntity entity = new LectureEntity();
+            entity.setTitle(title);
             entity.setDescription(description);
+            entity.setTime(time);
             entity.setPrice(price);
-
             return entity;
         }
-
-        public String getName() {
-            return name;
+        public String getTitle() {
+            return title;
         }
 
-        public void setName(String name) {
-            this.name = name;
+        public void setTitle(String title) {
+            this.title = title;
         }
 
         public String getDescription() {
@@ -79,6 +88,14 @@ public class ProductDto {
 
         public void setDescription(String description) {
             this.description = description;
+        }
+
+        public Integer getTime() {
+            return time;
+        }
+
+        public void setTime(Integer time) {
+            this.time = time;
         }
 
         public Integer getPrice() {

@@ -1,4 +1,4 @@
-package study.crud.model;
+package study.crud.product.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,7 +11,8 @@ public class ProductEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idx;
-    private String contents;
+    private String name;
+    private String description;
     private Integer price;
 
     public Integer getPrice() {
@@ -22,12 +23,20 @@ public class ProductEntity {
         this.price = price;
     }
 
-    public String getContents() {
-        return contents;
+    public String getDescription() {
+        return description;
     }
 
-    public void setContents(String contents) {
-        this.contents = contents;
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Integer getIdx() {
@@ -37,6 +46,6 @@ public class ProductEntity {
     public void setIdx(Integer idx) {
         this.idx = idx;
     }
-
-
 }
+
+

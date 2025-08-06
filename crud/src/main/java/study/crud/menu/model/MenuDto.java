@@ -1,21 +1,20 @@
-package study.crud.product.model;
+package study.crud.menu.model;
 
-public class ProductDto {
-    public static class Product {
+public class MenuDto {
+    public static class Menu {
         private Integer idx;
         private String name;
-        private String description;
         private Integer price;
+        private Integer calorie;
 
-        public static ProductDto.Product from(ProductEntity entity){
-            ProductDto.Product dto = new ProductDto.Product();
+        public static MenuDto.Menu from(MenuEntity entity) {
+            MenuDto.Menu dto = new MenuDto.Menu();
             dto.setIdx(entity.getIdx());
             dto.setName(entity.getName());
-            dto.setDescription(entity.getDescription());
             dto.setPrice(entity.getPrice());
+            dto.setCalorie(entity.getCalorie());
 
             return dto;
-
         }
 
         public Integer getIdx() {
@@ -34,14 +33,6 @@ public class ProductDto {
             this.name = name;
         }
 
-        public String getDescription() {
-            return description;
-        }
-
-        public void setDescription(String description) {
-            this.description = description;
-        }
-
         public Integer getPrice() {
             return price;
         }
@@ -49,19 +40,26 @@ public class ProductDto {
         public void setPrice(Integer price) {
             this.price = price;
         }
+
+        public Integer getCalorie() {
+            return calorie;
+        }
+
+        public void setCalorie(Integer calorie) {
+            this.calorie = calorie;
+        }
     }
 
     public static class Register {
         private String name;
-        private String description;
         private Integer price;
+        private Integer calorie;
 
-        public ProductEntity toEntity() {
-            ProductEntity entity = new ProductEntity();
+        public MenuEntity toEntity() {
+            MenuEntity entity = new MenuEntity();
             entity.setName(name);
-            entity.setDescription(description);
             entity.setPrice(price);
-
+            entity.setCalorie(calorie);
             return entity;
         }
 
@@ -73,20 +71,20 @@ public class ProductDto {
             this.name = name;
         }
 
-        public String getDescription() {
-            return description;
-        }
-
-        public void setDescription(String description) {
-            this.description = description;
-        }
-
         public Integer getPrice() {
             return price;
         }
 
         public void setPrice(Integer price) {
             this.price = price;
+        }
+
+        public Integer getCalorie() {
+            return calorie;
+        }
+
+        public void setCalorie(Integer calorie) {
+            this.calorie = calorie;
         }
     }
 }

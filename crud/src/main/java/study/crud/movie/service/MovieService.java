@@ -1,8 +1,12 @@
 package study.crud.movie.service;
 
 import org.springframework.stereotype.Service;
+import study.crud.movie.model.MovieDto;
+import study.crud.movie.model.MovieEntity;
+import study.crud.movie.repository.MovieRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class MovieService {
