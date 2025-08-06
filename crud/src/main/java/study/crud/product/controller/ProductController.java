@@ -24,14 +24,14 @@ public class ProductController {
     public ResponseEntity list() {
         List<ProductDto.Product> response = productService.list();
 
-        return ProductEntity.status(200).body(response);
+        return ResponseEntity.status(200).body(response);
     }
 
     @GetMapping("/read")
     public ResponseEntity read(Integer idx) {
         ProductDto.Product response = productService.read(idx);
 
-        return ProductEntity.status(200).body(response);
+        return ResponseEntity.status(200).body(response);
     }
 
     @GetMapping("/search")
