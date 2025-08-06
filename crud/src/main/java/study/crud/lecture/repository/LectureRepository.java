@@ -7,6 +7,6 @@ import study.crud.menu.model.MenuEntity;
 import java.util.List;
 
 public interface LectureRepository extends JpaRepository<LectureEntity, Integer> {
-    List<LectureEntity> findByName(String name);
+    List<LectureEntity> findByTitle(String title);
 }
 

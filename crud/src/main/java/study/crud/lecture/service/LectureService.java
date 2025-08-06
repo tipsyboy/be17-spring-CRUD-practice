@@ -43,7 +43,7 @@ public class LectureService {
     }
 
     public List<LectureDto.Lecture> search(String name) {
-        List<LectureEntity> result = lectureRepository.findByName(name);
+        List<LectureEntity> result = lectureRepository.findByTitle(name);
 
         return result.stream()
                 .map(LectureDto.Lecture::from)
